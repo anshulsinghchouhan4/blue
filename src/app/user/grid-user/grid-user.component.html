@@ -1,0 +1,47 @@
+<div class="grid-layout">
+  <div class="row">
+    <div class="card" *ngFor="let data of filterData; let i = index">
+      <div class="card-body">
+        <div class="action-btn">
+          <span (click)="editInfo(i)">...</span>
+        </div>
+        <div class="active-status">
+          <span
+            [ngClass]="{
+              green: data.status === true,
+              red: data.status !== true
+            }"
+            >{{ data.status === true ? "Active" : "Inactive" }}</span
+          >
+        </div>
+        <div class="row user-card">
+          <div class="col-3">
+            <img src="/assets/images/profile-icon.png" alt="" />
+          </div>
+          <div class="col-9">
+            <span>{{ data.name }} </span><br />
+            <span class="dept"> {{ data.dept }}</span>
+          </div>
+        </div>
+        <div class="user-bottom mt-2">
+          <div class="row align-items-center">
+            <div class="col-3">
+              <img src="/assets/icons/phone_icon.svg" alt="" />
+            </div>
+            <div class="col-9">
+              <span>{{ data.phone }}</span>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-3">
+              <img src="/assets/icons/email_icon.svg" alt="" />
+            </div>
+            <div class="col-9">
+              <span>{{ data.email }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

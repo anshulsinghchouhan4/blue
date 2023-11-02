@@ -1,0 +1,28 @@
+<div class="user-table mt-3">
+  <table class="user-data-table">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Role</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let data of filterData; let i = index">
+      <td>{{ data.name }}</td>
+      <td>{{ data.email }}</td>
+      <td>{{ data.phone }}</td>
+      <td>
+        <div class="role">{{ data.role }}</div>
+      </td>
+      <td>
+        <div
+          [ngClass]="{ green: data.status === true, red: data.status !== true }"
+        >
+          {{ data.status === true ? "Active" : "Inactive" }}
+        </div>
+      </td>
+      <td class="action" (click)="editInfo(i)">...</td>
+    </tr>
+  </table>
+</div>

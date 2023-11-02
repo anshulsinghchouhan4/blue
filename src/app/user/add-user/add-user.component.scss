@@ -1,0 +1,53 @@
+.user-table {
+  width: 100%;
+}
+.user-data-table {
+  width: 100%;
+}
+
+.add-list {
+  width: 30%;
+}
+
+.container {
+  padding: 2rem 2rem;
+}
+
+.row {
+  margin: 1.5rem 0rem;
+}
+
+.cancel-btn {
+  width: 40%;
+  border-radius: 8px;
+  background: #e3e3e3;
+  color: #777;
+}
+
+.create-btn {
+  width: 40%;
+  border-radius: 8px;
+  background: #0abfab;
+  color: white;
+}
+
+.form-check-label {
+  order: -1;
+  margin-right: 10px;
+}
+
+.form-check-input:checked {
+  background-color: #1cd42f;
+  border-color: #1cd42f;
+}
+
+.form-check-input:focus {
+  border-color: none;
+  box-shadow: none;
+}
+
+.form-control {
+  border-radius: 6px;
+  border: 1px solid #dbdbdb;
+  background: #f3f3f3;
+}

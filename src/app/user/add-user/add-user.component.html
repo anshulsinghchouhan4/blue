@@ -1,0 +1,183 @@
+<div class="container">
+  <div class="user-form">
+    <form [formGroup]="userForm" (ngSubmit)="createUser()">
+      <div class="row">
+        <div class="col-3 form-group">
+          <label for="firsname">FirstName</label>
+          <input class="form-control" type="text" formControlName="firstname" />
+          <div
+            *ngIf="
+              isFormSubmitted && userForm.get('firstname')?.hasError('required')
+            "
+          >
+            <span class="text-danger">First Name is required</span>
+          </div>
+        </div>
+        <div class="col-3 form-group">
+          <label for="lastname">Lastname</label>
+          <input class="form-control" type="text" formControlName="lastname" />
+          <div
+            *ngIf="
+              isFormSubmitted && userForm.get('lastname')?.hasError('required')
+            "
+          >
+            <span class="text-danger">Last Name is required</span>
+          </div>
+        </div>
+        <div class="col-3 form-group">
+          <label for="role">Role</label>
+          <select class="form-control" formControlName="role">
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+          </select>
+        </div>
+
+        <div class="col-3 form-group">
+          <label for="dept">Department</label>
+          <input class="form-control" type="text" formControlName="dept" />
+          <div
+            *ngIf="
+              isFormSubmitted && userForm.get('dept')?.hasError('required')
+            "
+          >
+            <span class="text-danger">Dept is required</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3 form-group">
+          <label for="firsname">Email</label>
+          <input class="form-control" type="text" formControlName="email" />
+          <div
+            *ngIf="
+              isFormSubmitted && userForm.get('email')?.hasError('required')
+            "
+          >
+            <span class="text-danger">Email is required</span>
+          </div>
+          <div
+            *ngIf="isFormSubmitted && userForm.get('email')?.hasError('email')"
+          >
+            <span class="text-danger">Invalid email format.</span>
+          </div>
+        </div>
+        <div class="col-3 form-group">
+          <label for="lastname">Phone Number</label>
+          <input class="form-control" type="text" formControlName="phone" />
+          <div
+            *ngIf="
+              isFormSubmitted && userForm.get('phone')?.hasError('required')
+            "
+          >
+            <span class="text-danger">Phone Number is required</span>
+          </div>
+          <div
+            *ngIf="
+              isFormSubmitted && userForm.get('phone')?.hasError('pattern')
+            "
+          >
+            <span class="text-danger">Phone Number must be numeric.</span>
+          </div>
+        </div>
+        <div class="col-3 form-group">
+          <label for="role">Password</label>
+          <input
+            class="form-control"
+            type="password"
+            formControlName="password"
+          />
+          <div
+            *ngIf="
+              isFormSubmitted && userForm.get('password')?.hasError('required')
+            "
+          >
+            <span class="text-danger">Password is required</span>
+          </div>
+          <div
+            *ngIf="
+              isFormSubmitted && userForm.get('password')?.hasError('minlength')
+            "
+          >
+            <span class="text-danger"
+              >Password must be at least 6 characters long.</span
+            >
+          </div>
+        </div>
+        <div class="col-3 form-group">
+          <label for="dept">Confirm Password</label>
+          <input
+            class="form-control"
+            type="password"
+            formControlName="confirmPassword"
+          />
+          <div
+            *ngIf="
+              isFormSubmitted &&
+              userForm.get('confirmPassword')?.hasError('required')
+            "
+          >
+            <span class="text-danger">Confirm Password is required</span>
+          </div>
+          <div
+            *ngIf="isFormSubmitted && userForm?.hasError('passwordMismatch')"
+          >
+            <span class="text-danger">Passwords do not match.</span>
+          </div>
+          <div
+            *ngIf="
+              isFormSubmitted &&
+              userForm.get('confirmPassword')?.hasError('minlength')
+            "
+          >
+            <span class="text-danger"
+              >Confirm Password must be at least 6 characters long.</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 d-flex flex-column form-group">
+          <label for="firsname">Address</label>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="3"
+            class="form-control"
+            formControlName="address"
+          ></textarea>
+          <div
+            *ngIf="
+              isFormSubmitted && userForm.get('address')?.hasError('required')
+            "
+          >
+            <span class="text-danger">Address is required</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-check form-switch col-3">
+          <label class="form-check-label" for="statusToggle">Status</label>
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="statusToggle"
+            formControlName="status"
+          />
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center mt-3">
+        <div class="col-4"></div>
+        <div class="col-4 d-flex justify-content-evenly">
+          <button class="btn cancel-btn" (click)="hideAddUser()">Cancel</button>
+          <button class="btn create-btn" type="submit">
+            {{ isUpdate ? "Update" : "Create" }}
+          </button>
+        </div>
+        <div class="col-4"></div>
+      </div>
+    </form>
+  </div>
+</div>

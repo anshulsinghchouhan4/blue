@@ -1,0 +1,36 @@
+.user-table {
+  width: 100%;
+}
+.user-data-table {
+  width: 100%;
+  font-family: Montserrat;
+}
+.role {
+  text-align: center;
+  width: 70%;
+  background: #f0f0f0;
+  border-radius: 6px;
+}
+.green,
+.red {
+  background: #83f48f;
+  width: 70%;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.red {
+  background: red;
+}
+
+th,
+td {
+  border-width: 0px 0px 1px 0px;
+  height: 50px;
+}
+
+.action {
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}

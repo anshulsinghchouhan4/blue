@@ -1,0 +1,26 @@
+.header-content {
+  height: 100%;
+  font-family: Montserrat;
+}
+.user-content {
+  width: 30%;
+}
+.notification {
+  img {
+    cursor: pointer;
+  }
+}
+.user-profile {
+  img {
+    cursor: pointer;
+  }
+}
+.city {
+  width: 50%;
+  .btn-group {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d4d4d4;
+    background: #fff;
+  }
+}

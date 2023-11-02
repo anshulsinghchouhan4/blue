@@ -1,0 +1,10 @@
+<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="grid_view">
+<mask id="mask0_0_591" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="29" height="29">
+<rect id="Bounding box" width="29" height="29" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_0_591)">
+<path id="grid_view_2" d="M4.229 13.2917V4.22916H13.2915V13.2917H4.229ZM4.229 24.7708V15.7083H13.2915V24.7708H4.229ZM15.7082 13.2917V4.22916H24.7707V13.2917H15.7082ZM15.7082 24.7708V15.7083H24.7707V24.7708H15.7082ZM6.0415 11.4792H11.479V6.04166H6.0415V11.4792ZM17.5207 11.4792H22.9582V6.04166H17.5207V11.4792ZM17.5207 22.9583H22.9582V17.5208H17.5207V22.9583ZM6.0415 22.9583H11.479V17.5208H6.0415V22.9583Z" fill="#747474"/>
+</g>
+</g>
+</svg>

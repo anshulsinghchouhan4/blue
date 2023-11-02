@@ -1,0 +1,19 @@
+.sidebar-content {
+  width: 100%;
+  font-family: Montserrat;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  img {
+    margin: 0rem 1.5rem;
+  }
+}
+
+.nav-item:hover {
+  background-color: #e7eceb;
+}

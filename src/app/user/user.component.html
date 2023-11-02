@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="row">
+        <div class="col-8 search-user">
+          <img src="assets/icons/search_icon.svg" alt="" />
+          <input
+            type="search"
+            class="search-input"
+            placeholder="Search"
+            [(ngModel)]="searchTerm"
+          />
+        </div>
+        <div class="col-4">
+          <button class="btn filter-btn d-flex justify-content-around">
+            <img src="assets/icons/filter_list.svg" alt="" />
+            <span>Filter</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="row d-flex justify-content-end">
+        <div class="col-3 d-flex justify-content-around list-style">
+          <img
+            src="assets/icons/list_view_active.svg"
+            alt=""
+            *ngIf="listViewSelected"
+            (click)="listViewSelected = false"
+          />
+          <img
+            src="assets/icons/list_view.svg"
+            alt=""
+            *ngIf="!listViewSelected"
+            (click)="listViewSelected = true"
+          />
+          <img
+            src="assets/icons/grid_view_active.svg"
+            alt=""
+            *ngIf="!listViewSelected"
+            (click)="listViewSelected = true"
+          />
+          <img
+            src="assets/icons/grid_view.svg"
+            alt=""
+            *ngIf="listViewSelected"
+            (click)="listViewSelected = false"
+          />
+        </div>
+        <div class="col-3">
+          <button class="btn add-user-btn" (click)="showAddUser()">
+            + User
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-5">
+    <app-list-user
+      *ngIf="listViewSelected"
+      [searchString]="searchTerm"
+    ></app-list-user>
+    <app-grid-user
+      *ngIf="!listViewSelected"
+      [searchString]="searchTerm"
+    ></app-grid-user>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+.user-bottom {
+  img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.card {
+  width: 18rem;
+  margin: 1rem;
+}
+
+.dept {
+  color: #2bd3c6;
+  font-family: Montserrat;
+}
+
+.grid-layout {
+  font-family: Montserrat;
+}
+
+.card-body {
+  position: relative;
+  .action-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  .active-status {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.green,
+.red {
+  background: #83f48f;
+  width: 70%;
+  text-align: center;
+  border-radius: 6px;
+  color: white;
+}
+
+.red {
+  background: red;
+}
